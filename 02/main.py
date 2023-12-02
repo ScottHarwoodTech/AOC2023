@@ -24,12 +24,13 @@ def handleLine(line: str):
             count = int(count)
             if maxPerColour[colour] < count:
                 maxPerColour[colour] = count
-
-
+    print(maxPerColour)
+    total = 1
     for colour in maxPerColour:
-        if maxPerColour[colour] > inputSet[colour]:
-            return 0
-    return gameId
+        print(total)
+        total *= maxPerColour[colour]
+
+    return total
 
 def main(file: str):
     lines = open(file).readlines()
